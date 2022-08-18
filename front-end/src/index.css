@@ -1,0 +1,43 @@
+body {
+  font-family: "Overlock";
+}
+
+h1 {
+  font-family: "Carter One";
+}
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  background-color: rgb(37, 36, 34);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 3em 1em 3em;
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(235, 94, 40);
+}
+
+h4 {
+  margin: 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+}
+
+/* .Snacks article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1em;
+} */
