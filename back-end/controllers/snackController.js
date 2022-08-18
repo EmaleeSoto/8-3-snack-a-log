@@ -7,12 +7,12 @@ const {
   updateSnack,
   deleteSnack,
 } = require("../queries/snacks.js");
-//TODO: Create functions to check validity of params
 
 const {
   checkBoolean,
   checkName,
   checkForNoAdditionalParams,
+  formatName,
 } = require("../validations/checkSnacks");
 
 // INDEX
@@ -39,13 +39,18 @@ snacks.get("/:id", async (req, res) => {
 // CREATE
 snacks.post(
   "/",
-  // checkName,
-  // checkBoolean,
-  // checkForNoAdditionalParams,
+  checkName,
+  checkBoolean,
+  checkForNoAdditionalParams,
   async (req, res) => {
     try {
       const snack = await createSnack(req.body);
-      res.json({ success: true, payload: snack });
+      snack[0].name = formatName(snack[0].name);
+      if (!snack[0].image) {
+        snack[0].image =
+          "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
+      }
+      res.json({ success: true, payload: snack[0] });
     } catch (error) {
       res.status(400).json({ error: error });
     }
@@ -53,14 +58,20 @@ snacks.post(
 );
 
 // UPDATE
-snacks.put("/:id", async (req, res) => {
-  try {
-    const snack = await updateSnack(req.params.id, req.body);
-    res.json({ success: true, payload: snack });
-  } catch (error) {
-    res.status(400).json({ success: false, error: error });
+snacks.put(
+  "/:id",
+  checkName,
+  checkBoolean,
+  checkForNoAdditionalParams,
+  async (req, res) => {
+    try {
+      const snack = await updateSnack(req.params.id, req.body);
+      res.json({ success: true, payload: snack });
+    } catch (error) {
+      res.status(400).json({ success: false, error: error });
+    }
   }
-});
+);
 
 // DELETE
 snacks.delete("/:id", async (req, res) => {
