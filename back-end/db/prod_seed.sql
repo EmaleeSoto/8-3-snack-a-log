@@ -1,4 +1,4 @@
-\c d9r4pja51onb9u; 
+\c d2ikkv14qut6mm; 
 
 INSERT INTO snacks (name, fiber, protein, added_sugar, is_healthy, image) VALUES
 ('Strawberries', 20, 10, 0, true, 'https://picsum.photos/id/1080/300/300'),
