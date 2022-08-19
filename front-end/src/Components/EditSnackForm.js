@@ -90,7 +90,7 @@ export default function EditSnackForm() {
           onChange={handleTextChange}
         />
         <br></br>
-        <label htmlFor="is-healthy">Is Health: </label>
+        <label htmlFor="is-healthy">Is Healthy: </label>
         <input
           id="is-healthy"
           type="checkbox"
