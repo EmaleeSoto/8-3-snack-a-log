@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 // import Show from "./Pages/Show";
-// import Edit from "./Pages/Edit";
+import Edit from "./Pages/Edit";
 // import FourOFour from "./Pages/FourOFour";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
             <Route path="/songs/:id/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} /> */}
             <Route path="/snacks/new" element={<New />} />
+            <Route path="/snacks/:id/edit" element={<Edit />} />
           </Routes>
         </main>
       </Router>
