@@ -17,6 +17,7 @@ function Snack({ snack }) {
               <img
                 className="hearts"
                 src={snack.is_healthy ? heartSolid : heartOutline}
+                alt="heart"
               />
               {snack.name}
             </h4>
