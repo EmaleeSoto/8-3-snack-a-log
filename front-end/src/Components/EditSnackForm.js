@@ -20,7 +20,7 @@ export default function EditSnackForm() {
     axios
       .get(`${API}/snacks/${id}`)
       .then((response) => {
-        setSnack(response.data);
+        setSnack(response.data.payload);
       })
       .catch((err) => {
         // navigate("/not-found");
@@ -109,8 +109,8 @@ export default function EditSnackForm() {
         <br></br>
         <input className="submit-new" type="submit" />
       </form>
-      <Link to={`/snacks/${id}`}>
-        <button className="back">{`Back to ${snack.name}`}</button>
+      <Link to={`/snacks`}>
+        <button className="back">{`Back to Snacks`}</button>
       </Link>
     </div>
   );
