@@ -54,7 +54,7 @@ function SnackDetails() {
       </article>
       <div className="showNavigation">
         <div>
-          <Link to={`/snacks/${id}`}>
+          <Link to={`/snacks`}>
             <button>Back</button>
           </Link>
         </div>
