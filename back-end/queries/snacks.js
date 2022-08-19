@@ -18,6 +18,10 @@ const getSnack = async (id) => {
 
 const createSnack = async (snack) => {
   try {
+    if (!snack.image || snack.image === "") {
+      snack.image =
+        "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
+    }
     return await db.any(
       "INSERT INTO snacks (name, fiber, protein, added_sugar, is_healthy, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
       [

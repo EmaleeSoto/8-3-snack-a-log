@@ -47,9 +47,9 @@ function SnackDetails() {
       <article>
         <div>
           <img className="food" src={snack.image} alt={snack.name} />
-          <h2>Protein: {snack.protein}</h2>
-          <h2>Fiber: {snack.fiber}</h2>
-          <h2>Added Sugar: {snack.added_sugar}</h2>
+          <h2>Protein: {snack.protein}g</h2>
+          <h2>Fiber: {snack.fiber}g</h2>
+          <h2>Added Sugar: {snack.added_sugar}g</h2>
         </div>
       </article>
       <div className="showNavigation">

@@ -46,10 +46,6 @@ snacks.post(
     try {
       const snack = await createSnack(req.body);
       snack[0].name = formatName(snack[0].name);
-      if (!snack[0].image || snack[0].image === null) {
-        snack[0].image =
-          "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
-      }
       res.json({ success: true, payload: snack[0] });
     } catch (error) {
       res.status(400).json({ error: error });
