@@ -4,7 +4,7 @@ import NavBar from "./Components/NavBar";
 
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
-// import New from "./Pages/New";
+import New from "./Pages/New";
 // import Show from "./Pages/Show";
 // import Edit from "./Pages/Edit";
 // import FourOFour from "./Pages/FourOFour";
@@ -22,6 +22,7 @@ function App() {
             <Route path="/songs/:id" element={<Show />} />
             <Route path="/songs/:id/edit" element={<Edit />} />
             <Route path="*" element={<FourOFour />} /> */}
+            <Route path="/snacks/new" element={<New />} />
           </Routes>
         </main>
       </Router>
