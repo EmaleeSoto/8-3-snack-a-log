@@ -1,5 +1,6 @@
 body {
   font-family: "Overlock";
+  background-color: #252422;
 }
 
 h1 {
@@ -53,13 +54,26 @@ h4 {
 }
 
 .Snacks div {
-  width: 150px;
+  padding: 1em;
+  background-color: rgb(255, 252, 242);
+  border: 1px solid #DA6739;
+}
+
+.Show {
   padding: 1em;
   background-color: rgb(255, 252, 242);
 }
 
-.Snacks img {
-  width: 150px;
+.New {
+  padding: 1em;
+  background-color: rgb(255, 252, 242);
+  border: 1px solid #DA6739;
+}
+
+.Edit {
+  padding: 1em;
+  background-color: rgb(255, 252, 242);
+  border: 1px solid #DA6739;
 }
 
 tbody {
@@ -78,6 +92,24 @@ tr {
   tr:hover { 
   transform: scale(1.1); 
   }
+
+
+.snack-details aside {
+  text-decoration: underline;
+}
+
+.snack-details aside h2 {
+  display: inline;
+}
+
+.snack-details aside img {
+  display: inline;
+  padding-left: 10px;
+}
+
+.snack-details article{
+  text-align: center;
+}
 
   @media (max-width: 1100px) {
     tbody {

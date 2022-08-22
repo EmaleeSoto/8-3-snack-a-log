@@ -44,30 +44,31 @@ function SnackDetails() {
           alt={snack.is_healthy ? "healthy food" : "unhealthy food"}
         />
       </aside>
-      <h2>{snack.name}</h2>
       <article>
+        <h2>{snack.name}</h2>
         <div>
           <img className="food" src={snack.image} alt={snack.name} />
           <h2>Protein: {snack.protein}g</h2>
           <h2>Fiber: {snack.fiber}g</h2>
           <h2>Added Sugar: {snack.added_sugar}g</h2>
         </div>
+
+        <div className="showNavigation">
+          <div>
+            <Link to={`/snacks`}>
+              <button>Back</button>
+            </Link>
+          </div>
+          <div>
+            <Link to={`/snacks/${snack.id}/edit`}>
+              <button>Edit</button>
+            </Link>
+          </div>
+          <div>
+            <button onClick={handleDelete}>Delete</button>
+          </div>
+        </div>
       </article>
-      <div className="showNavigation">
-        <div>
-          <Link to={`/snacks`}>
-            <button>Back</button>
-          </Link>
-        </div>
-        <div>
-          <Link to={`/snacks/${snack.id}/edit`}>
-            <button>Edit</button>
-          </Link>
-        </div>
-        <div>
-          <button onClick={handleDelete}>Delete</button>
-        </div>
-      </div>
     </div>
   );
 }

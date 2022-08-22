@@ -1,13 +1,14 @@
 import React from "react";
-import NewSongForm from "../Components/NewSnackForm";
+import NewSnackForm from "../Components/NewSnackForm";
 
 export default function New() {
   return (
-    <div>
+    <div className="New">
       <header>
         <h2>Snacks</h2>
       </header>
-      <NewSongForm />
+      <hr></hr>
+      <NewSnackForm />
     </div>
   );
 }

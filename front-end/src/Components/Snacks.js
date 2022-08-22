@@ -18,17 +18,15 @@ function Snacks() {
     <div className="Snacks">
       <article>
         <div>
-          <section>
-            <h1>Snacks List</h1>
-            <hr />
-            <table>
-              <tbody>
-                {snacks.map((snack) => {
-                  return <Snack key={snack.id} snack={snack} />;
-                })}
-              </tbody>
-            </table>
-          </section>
+          <h1>Snacks List</h1>
+          <hr />
+          <table>
+            <tbody>
+              {snacks.map((snack) => {
+                return <Snack key={snack.id} snack={snack} />;
+              })}
+            </tbody>
+          </table>
           <br />
           <button>
             <Link to={"/"}>Back</Link>
