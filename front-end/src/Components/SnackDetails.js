@@ -30,13 +30,14 @@ function SnackDetails() {
       });
   };
   return (
-    <div>
-      <h2>
-        {snack.is_healthy
-          ? "This snack is healthy"
-          : "This snack is not healthy"}
-      </h2>
+    <div className="snack-details">
+      <hr></hr>
       <aside>
+        <h2>
+          {snack.is_healthy
+            ? "This snack is healthy"
+            : "This snack is not healthy"}
+        </h2>
         <img
           className="hearts"
           src={snack.is_healthy ? heartSolid : heartOutline}

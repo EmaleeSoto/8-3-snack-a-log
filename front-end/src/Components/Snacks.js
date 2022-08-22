@@ -16,21 +16,25 @@ function Snacks() {
 
   return (
     <div className="Snacks">
-      <section>
-        <h1>Snacks List</h1>
-        <hr />
-        <table>
-          <tbody>
-            {snacks.map((snack) => {
-              return <Snack key={snack.id} snack={snack} />;
-            })}
-          </tbody>
-        </table>
-      </section>
-      <br />
-      <button>
-        <Link to={"/"}>Back</Link>
-      </button>
+      <article>
+        <div>
+          <section>
+            <h1>Snacks List</h1>
+            <hr />
+            <table>
+              <tbody>
+                {snacks.map((snack) => {
+                  return <Snack key={snack.id} snack={snack} />;
+                })}
+              </tbody>
+            </table>
+          </section>
+          <br />
+          <button>
+            <Link to={"/"}>Back</Link>
+          </button>
+        </div>
+      </article>
     </div>
   );
 }
