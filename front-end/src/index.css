@@ -59,9 +59,29 @@ h4 {
   border: 1px solid #DA6739;
 }
 
+.Home {
+  padding: 1em;
+  background-color: rgb(255, 252, 242);
+}
+
+.Home-Page {
+  height: 40em;
+  border: 1px solid rgb(255, 252, 242);;
+  background: url("https://st2.depositphotos.com/1005573/6189/i/600/depositphotos_61892893-stock-photo-savoury-snacks.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.Home img {
+  text-align: center;
+}
+
 .Show {
   padding: 1em;
   background-color: rgb(255, 252, 242);
+  border: 1px solid #DA6739;
 }
 
 .New {
@@ -87,12 +107,11 @@ tbody {
 
 tr { 
   transition: all .2s ease-in-out; 
-  }
-  
-  tr:hover { 
-  transform: scale(1.1); 
-  }
+}
 
+tr:hover { 
+  transform: scale(1.1); 
+}
 
 .snack-details aside {
   text-decoration: underline;
