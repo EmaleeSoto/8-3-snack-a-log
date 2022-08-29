@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const API = process.env.REACT_APP_API_URL;
 
-export default function NewSongForm() {
+export default function NewSnackForm() {
   const [snack, setSnack] = useState({
     name: "",
     fiber: 0,
@@ -39,7 +39,7 @@ export default function NewSongForm() {
 
   return (
     <div>
-      <form id="new-song" onSubmit={handleSubmit}>
+      <form id="new-snack" onSubmit={handleSubmit}>
         <label htmlFor="name">Name: </label>
         <br></br>
         <input id="name" type="text" onChange={handleTextChange} />
